@@ -7,7 +7,10 @@
 ### Lastly, just run the script by typing 
 `./check_simple_shell.bash`
 
+### You can debug your code by commenting out the rm -f lines at the bottom of a given script like so:
+
+![](cmtrm.png)
 
 ## Final result should look something like:
 
-![](example.png)
+![](exampleout.png)

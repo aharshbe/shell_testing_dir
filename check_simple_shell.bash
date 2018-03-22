@@ -98,7 +98,7 @@ fi
 
 # Cleanup
 rm -f $OUTPUTFILE $LTRACEOUTPUTFILE $ERROROUTPUTFILE
-#rm -f checker_output_*
-#rm -f checker_tmp_file_*
-#rm -f /tmp/.checker_tmp_file_*
+rm -f checker_output_*
+rm -f checker_tmp_file_*
+rm -f /tmp/.checker_tmp_file_*
 echo -ne "\033[37m"
