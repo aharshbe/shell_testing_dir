@@ -1,0 +1,18 @@
+total 56
+drwxrwxrwt 13 root   root   4096 Mar 22 01:29 .
+drwxr-xr-x 24 root   root   4096 Mar 15 13:08 ..
+drwxrwxrwt  2 root   root   4096 Mar 21 20:53 .ICE-unix
+drwxrwxrwt  2 root   root   4096 Mar 21 20:53 .Test-unix
+-r--r--r--  1 root   root     11 Mar 21 20:53 .X0-lock
+drwxrwxrwt  2 root   root   4096 Mar 21 20:53 .X11-unix
+drwxrwxrwt  2 root   root   4096 Mar 21 20:53 .XIM-unix
+-rwxrw---x  1 austin austin    0 Mar 22 01:29 .checker_tmp_file_2370
+drwxrwxrwt  2 root   root   4096 Mar 21 20:53 .font-unix
+drwxrwxrwt  2 root   root   4096 Mar 21 20:53 VMwareDnD
+-rw-------  1 austin austin    0 Mar 21 20:53 config-err-VSqm8R
+drwx------  3 root   root   4096 Mar 21 20:53 systemd-private-48c2d34c53b94c7bb708fa72215b44b5-colord.service-nxGGw4
+drwx------  3 root   root   4096 Mar 21 20:53 systemd-private-48c2d34c53b94c7bb708fa72215b44b5-fwupd.service-lnj5JP
+drwx------  3 root   root   4096 Mar 21 20:53 systemd-private-48c2d34c53b94c7bb708fa72215b44b5-rtkit-daemon.service-qgOGjI
+drwx------  3 root   root   4096 Mar 21 20:53 systemd-private-48c2d34c53b94c7bb708fa72215b44b5-systemd-timesyncd.service-L9z1Sr
+-rw-rw-r--  1 austin austin    0 Mar 21 20:53 unity_support_test.0
+drwx------  2 root   root   4096 Mar 21 20:53 vmware-root
