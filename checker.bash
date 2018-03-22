@@ -84,6 +84,7 @@ done
 
 if [[ "$j" -eq 0 ]]; then
     clear
+    ./ship
 	echo ""
 	echo "Congrats you passed all tests!"
     echo "You ROCK!!!!!!!!!!!!!"

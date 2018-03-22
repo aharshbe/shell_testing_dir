@@ -14,6 +14,6 @@
 	**betty checking is set to not show by default which is `0`
 
 ## Final result should look something like: 
-	**upon success you'll see "Congrats you passed all tests!"**
+	**upon success you'll see "Congrats you passed all tests!" and maybe a hidden easter egg**
 
 ![](exampleout.png)
