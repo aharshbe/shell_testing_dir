@@ -5,7 +5,7 @@
 `SHELL="../../HolbertonRepos/bash_stuff/simple_shell/V3/h"`
 
 ### Lastly, just run the script by typing 
-`./check_simple_shell.bash`
+`./checker.bash`
 
 ### You can debug your code by commenting out the `rm -f` lines at the bottom of a given script like so:
 
