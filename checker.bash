@@ -82,9 +82,11 @@ do
     done
 done
 
-if [[ "$i" -eq 32 ]]; then
+if [[ "$j" -eq 0 ]]; then
+    clear
 	echo ""
 	echo "Congrats you passed all tests!"
+    echo "You ROCK!!!!!!!!!!!!!"
 	echo ""
     echo "***;)******;)*********;)******"
     echo -e "\033[32m*********Results**************\033[37m"
