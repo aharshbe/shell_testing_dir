@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# simple test with ls to check if the shell can find ls in the PATH
+
+command="betty *.c *.h"
+
+if [[ $betty_check -eq 1 ]]; then
+cd $bettycheckerdir && $command
+else
+	echo "no betty check... ;)"
+fi
+
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+
+
+
+# clean up
+if [[ $betty_check -eq 1 ]]; then
+cd -
+fi

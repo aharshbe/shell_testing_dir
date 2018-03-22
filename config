@@ -18,3 +18,5 @@ RM=`which rm`
 TOUCH=`which touch`
 CHMOD=`which chmod`
 SHOWERRORS=0
+betty_check=0
+bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"

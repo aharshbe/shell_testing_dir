@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# simple test with ls to check if the shell can find ls in the PATH
+
+command="betty *.c *.h"
+
+cd $bettycheckerdir && $command
+
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+
+
+
+# clean up
+stop_shell
+rm -f $tmp_file
+rm -f $tmp_file2

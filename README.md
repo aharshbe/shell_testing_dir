@@ -10,6 +10,9 @@
 ### You can debug your code by setting the `SHOWERRORS` setting in the config file to `1`
 	**Showing errors is set not show by default which is `0`
 
+### You betty check your code by setting the `betty_check` setting in the config file to `1`, you then need to add your project's directory to `bettycheckerdir` like so: `bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"`
+	**betty checking is set to not show by default which is `0`
+
 ## Final result should look something like: 
 	**upon success you'll see "Congrats you passed all tests!"**
 
