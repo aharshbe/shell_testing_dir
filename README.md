@@ -7,7 +7,7 @@
 ### Lastly, just run the script by typing 
 `./checker.bash`
 
-### You can debug your code by setting the `SHOWERRORS` setting in the config file to **1**
+### You can debug your code by setting the `SHOWERRORS` setting in the config file to `1`
 	**Showing errors is set to 0 by default
 
 ## Final result should look something like: 
