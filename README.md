@@ -10,4 +10,4 @@
 
 ## Final result should look something like:
 
-[!](example.png)
+![](example.png)
