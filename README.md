@@ -9,9 +9,9 @@
 
 ### You can debug your code by commenting out the `rm -f` lines at the bottom of a given script like so:
 
-![](cmtrm.png)
+![](readmephotos/cmtrm.png)
 
 ## Final result should look something like: 
 	**upon success you'll see `"Congrats you passed all tests!"`
 
-![](exampleout.png)
+![](readmephotos/exampleout.png)
