@@ -12,6 +12,6 @@
 ![](readmephotos/cmtrm.png)
 
 ## Final result should look something like: 
-	**upon success you'll see `"Congrats you passed all tests!"`
+	**upon success you'll see "Congrats you passed all tests!"**
 
 ![](readmephotos/exampleout.png)
