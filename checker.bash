@@ -27,7 +27,7 @@ function print_ko()
 #######################################
 function print_ok()
 {
-    echo -e "[\033[32mOK\033[37m]"
+    echo -e "[\033[32m^-^\033[37m]"
 }
 
 #######################################
@@ -64,9 +64,13 @@ echo -ne "\033[37m"
     echo "***************THE*****;)*****"
     echo "**;)******CHECKER*************"
     echo "*****;)********;)******;)*****"
+    echo ""
+    echo -e "[\033[32m^-^\033[37m] -- means you are good to go! [\033[32mOK\033[37m]"
+    echo -e "[\033[31m;)\033[37m] -- means something went wrong! [\033[31mUHG OH!\033[37m]"
+    echo ""
 # Counter for tests passed
 i=0
-
+j=0
 # Locates all tests and launch them
 for dir in `ls -d "$TESTDIR"/*/`
 do
@@ -79,19 +83,24 @@ do
 done
 
 if [[ "$i" -eq 32 ]]; then
+	echo ""
+	echo "Congrats you passed all tests!"
+	echo ""
     echo "***;)******;)*********;)******"
     echo -e "\033[32m*********Results**************\033[37m"
     echo "*********;)*******************"
-    echo "Congrats you passed all tests!"
     echo -e "\033[32m***********RESULTS*****;)*****\033[37m"
     echo "**;)**************************"
     echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
 else
+	echo ""
+	echo -e "You passed \033[32m[$i]\033[37m tests :-)"
+	echo -e "But missed \033[31m[$j]\033[37m tests :'("
+	echo ""
     echo "***;)******;)*********;)******"
     echo -e "\033[32m*********Results**************\033[37m"
     echo "*********;)*******************"
-    echo "    You passed $i tests"
-    echo -e "\033[32m***********RESULTS*****;)*****\033[37m"
+    echo -e "\033[32m***********RESULTS*****;)*****\033[37m"	
     echo "**;)**************************"
     echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
 fi

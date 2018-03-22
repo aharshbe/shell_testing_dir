@@ -30,6 +30,7 @@ if [ "$res" == "cisfun" ]; then
     i=`expr $i + 1`
 else
     print_ko
+    j=`expr $j + 1`
 fi
 
 # clean up

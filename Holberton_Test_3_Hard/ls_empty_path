@@ -32,6 +32,7 @@ if [ $nmatch -eq 0 ]; then
 	   i=`expr $i + 1`
     else
 	   print_ok
+	   j=`expr $j + 1`
     fi
 else
     print_ko

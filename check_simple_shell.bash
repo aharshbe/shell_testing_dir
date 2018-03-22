@@ -66,7 +66,7 @@ echo -ne "\033[37m"
     echo "*****;)********;)******;)*****"
 # Counter for tests passed
 i=0
-
+j=0
 # Locates all tests and launch them
 for dir in `ls -d "$TESTDIR"/*/`
 do
@@ -90,7 +90,7 @@ else
     echo "***;)******;)*********;)******"
     echo -e "\033[32m*********Results**************\033[37m"
     echo "*********;)*******************"
-    echo "    You passed $i tests"
+    echo "You passed $i tests and missed $j tests..."
     echo -e "\033[32m***********RESULTS*****;)*****\033[37m"
     echo "**;)**************************"
     echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"

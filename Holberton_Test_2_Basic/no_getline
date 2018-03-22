@@ -20,6 +20,7 @@ $SLEEP $SLEEPSECONDS
 nmatch=`cat $LTRACEOUTPUTFILE | grep getline | wc -l`
 if [ $nmatch -eq 1 ]; then
     print_ko
+    j=`expr $j + 1`
 else
     print_ok
     i=`expr $i + 1`
