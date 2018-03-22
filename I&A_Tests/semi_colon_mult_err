@@ -2,7 +2,7 @@
 #
 # simple test with ls to check if the shell can find ls in the PATH
 
-command="env"
+command="ls ;;;;; ls"
 tmp_file="testing_custom_$RANDOM"
 tmp_file2="testing_real_$RANDOM"
 

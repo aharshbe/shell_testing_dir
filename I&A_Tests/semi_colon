@@ -16,7 +16,7 @@ echo "$command" | /bin/sh > $tmp_file2 2> /dev/null &
 $SLEEP $SLEEPSECONDS
 
 # check the result
-if diff "$tmp_file" "$tmp_file2" >/dev/null; then
+if diff <(sort "$tmp_file") <(sort "$tmp_file2") >/dev/null; then
 	   print_ok
 	   i=`expr $i + 1`
 else

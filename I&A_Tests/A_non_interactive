@@ -2,7 +2,7 @@
 #
 # simple test with ls to check if the shell can find ls in the PATH
 
-command="env"
+command="/bin/ls"
 tmp_file="testing_custom_$RANDOM"
 tmp_file2="testing_real_$RANDOM"
 
@@ -16,7 +16,8 @@ echo "$command" | /bin/sh > $tmp_file2 2> /dev/null &
 $SLEEP $SLEEPSECONDS
 
 # check the result
-if diff <(sort "$tmp_file") <(sort "$tmp_file2") >/dev/null; then
+
+if diff <(sort "$tmp_file") <(sort "$tmp_file2"); then
 	   print_ok
 	   i=`expr $i + 1`
 else
