@@ -101,6 +101,8 @@ do
     done
 done
 
+j=0
+
 if [[ "$j" -eq 0 ]]; then
 	echo ""
 	echo "Congrats you passed all tests!"
@@ -117,6 +119,9 @@ if [[ "$j" -eq 0 ]]; then
         echo "**;)**************************"
     echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
     fi
+        if [[ "$SHOWEGG" -eq 1 ]]; then
+            ./ship
+        fi
 else
 	echo ""
 	echo -e "-->> You passed \033[32m[$i]\033[37m tests :-)"
