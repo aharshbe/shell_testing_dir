@@ -101,8 +101,6 @@ do
     done
 done
 
-j=0
-
 if [[ "$j" -eq 0 ]]; then
 	echo ""
 	echo "Congrats you passed all tests!"
