@@ -20,7 +20,7 @@ grep -v '^_=' $tmp_file2 > tmp2
 $SLEEP $SLEEPSECONDS
 
 # check the result
-if diff <(sort "tmp") <(sort "tmp2") > /dev/null; then
+if diff <(sort "tmp") <(sort "tmp2"); then
 	   print_ok
 	   i=`expr $i + 1`
 else
