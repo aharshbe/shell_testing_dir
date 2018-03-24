@@ -10,11 +10,14 @@ tmp_file2="testing_real_$RANDOM"
 touch $tmp_file
 # send commands
 echo "$command" | $SHELL > $tmp_file 2> /dev/null &
-echo "$command" | /bin/sh > $tmp_file2 2> /dev/null &
+echo "$command" | $TSHELL > $tmp_file2 2> /dev/null &
 
 # removes the path differences to compare correctly
-grep -v '^_=' $tmp_file > tmp
-grep -v '^_=' $tmp_file2 > tmp2
+#grep -v '^_=' $tmp_file > tmp
+#grep -v '^_=' $tmp_file2 > tmp2
+
+sed -i '/^_=|SHLVL/d' $tmp_file > tmp
+sed -i '/^_=|SHLVL/d' $tmp_file2 > tmp2
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
