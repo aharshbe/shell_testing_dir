@@ -20,6 +20,5 @@
 	`SHOWEGG=1`
 
 ## Final result should look something like: 
-	**upon success you'll see "Congrats you passed all tests!" and maybe a hidden easter egg**
 
 ![](exampleout.png)
