@@ -9,7 +9,7 @@ if [[ $betty_check -eq 1 ]]; then
 	echo ""
 	echo ">>> Checking betty..."
 	echo ""
-	cd $bettycheckerdir && $command >> tmp
+	cd $bettycheckerdir && $command >> ./tmp_file_12345
 else
 	echo "no betty check... ;)"
 fi
@@ -22,3 +22,5 @@ $SLEEP $SLEEPSECONDS
 if [[ $betty_check -eq 1 ]]; then
 cd -
 fi
+
+rm -rf ./tmp_file_12345
