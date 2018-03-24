@@ -12,11 +12,15 @@ touch $tmp_file
 echo "$command" | $SHELL > $tmp_file 2> /dev/null &
 echo "$command" | /bin/sh > $tmp_file2 2> /dev/null &
 
+# removes the path differences to compare correctly
+grep -v '^_=' $tmp_file > tmp
+grep -v '^_=' $tmp_file2 > tmp2
+
 # wait a little bit
 $SLEEP $SLEEPSECONDS
 
 # check the result
-if diff <(sort "$tmp_file") <(sort "$tmp_file2") >/dev/null; then
+if diff <(sort "tmp") <(sort "tmp2") > /dev/null; then
 	   print_ok
 	   i=`expr $i + 1`
 else
@@ -41,3 +45,5 @@ fi
 stop_shell
 rm -f $tmp_file
 rm -f $tmp_file2
+rm -rf tmp
+rm -rf tmp2

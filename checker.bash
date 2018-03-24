@@ -47,7 +47,7 @@ function stop_shell()
     if [ `pidof $SHELL | wc -l` -ne 0 ]; then
 	   killall -9 $SHELL 2>&1 > /dev/null
     fi
-    #rm -f $OUTPUTFILE $ERROROUTPUTFILE $LTRACEOUTPUTFILE
+    rm -f $OUTPUTFILE $ERROROUTPUTFILE $LTRACEOUTPUTFILE
 }
 
 # Load configuration
@@ -55,7 +55,7 @@ source config
 
 # Cleanup
 echo -ne "\033[37m"
-#rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
+rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 
 # Cool welcome
     echo "***;)******;)*********;)******"
@@ -83,7 +83,6 @@ do
 done
 
 if [[ "$j" -eq 0 ]]; then
-    clear
     ./ship
 	echo ""
 	echo "Congrats you passed all tests!"

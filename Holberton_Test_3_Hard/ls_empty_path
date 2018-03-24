@@ -44,7 +44,7 @@ if [ $nmatch -eq 0 ]; then
 	    echo -e "[\033[31m************************\033[37m]"
 	   fi
     else
-	   print_ok
+	   print_ko
 	   j=`expr $j + 1`
     fi
 else
