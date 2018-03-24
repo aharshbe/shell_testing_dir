@@ -90,6 +90,8 @@ rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 # Counter for tests passed
 i=0
 j=0
+k=0
+l=0
 # Locates all tests and launch them
 for dir in `ls -d "$TESTDIR"/*/`
 do
@@ -121,10 +123,22 @@ if [[ "$j" -eq 0 ]]; then
             ./ship
         fi
 else
-	echo ""
-	echo -e "-->> You passed \033[32m[$i]\033[37m tests :-)"
-	echo -e "-->> But missed \033[31m[$j]\033[37m tests :'("
-	echo ""
+    if [[ $COUNTADV -eq 0 ]]; then
+        echo ""
+        echo -e "-->> You passed \033[32m[$i]\033[37m tests :-)"
+        echo -e "-->> But missed \033[31m[$j]\033[37m tests :'("
+        echo ""
+    else
+        total=`expr $l + $i`
+        passavd=`expr $l - $k`
+        mandatory=`expr $i - $k` 
+        echo ""
+        echo " \033[32m-->> There are [$total] total tasks <<--"
+        echo -e "You passed \033[32m[$mandatory]\033[37m mandatory"
+        echo -e "You passed \033[32m[$passavd]\033[37m advanced"
+        echo -e "You missed \033[31m[$j]\033[37m mandatory tasks"
+        echo -e "You missed \033[31m[$k]\033[37m advanced tasks"
+    fi
     if [[ "$FUNMODE" -eq 1 ]]; then
         echo "***;)******;)*********;)******"
         echo -e "\033[32m*********Results**************\033[37m"

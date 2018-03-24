@@ -2,7 +2,7 @@
 #
 # simple test with ls to check if the shell can find ls in the PATH
 
-command="history"
+command="ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn"
 tmp_file="testing_custom_$RANDOM"
 tmp_file2="testing_real_$RANDOM"
 
@@ -19,9 +19,13 @@ $SLEEP $SLEEPSECONDS
 if diff "$tmp_file" "$tmp_file2" >/dev/null; then
 	   print_ok
 	   i=`expr $i + 1`
+	   l=`expr $l + 1`
 else
 	   print_ko
-	   j=`expr $j + 1`
+	  	   if [[ $COUNTADV -eq 1 ]]; then
+	   		l=`expr $l + 1`
+	   		k=`expr $k + 1`
+		fi
 	   if [[ $SHOWERRORS -eq 1 ]]; then
 	   	echo ""
 	   	echo -e "[\033[31m************************\033[37m]"

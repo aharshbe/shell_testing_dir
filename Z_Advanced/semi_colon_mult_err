@@ -2,7 +2,7 @@
 #
 # simple test with ls to check if the shell can find ls in the PATH
 
-command="ls | wc -l"
+command="ls ;;;;; ls"
 tmp_file="testing_custom_$RANDOM"
 tmp_file2="testing_real_$RANDOM"
 
@@ -16,12 +16,16 @@ echo "$command" | $TSHELL > $tmp_file2 2> /dev/null &
 $SLEEP $SLEEPSECONDS
 
 # check the result
-if diff "$tmp_file" "$tmp_file2" >/dev/null; then
+if diff <(sort "$tmp_file") <(sort "$tmp_file2") >/dev/null; then
 	   print_ok
 	   i=`expr $i + 1`
+	   l=`expr $l + 1`
 else
 	   print_ko
-	   j=`expr $j + 1`
+	   	   if [[ $COUNTADV -eq 1 ]]; then
+	   		k=`expr $k + 1`
+	   		l=`expr $l + 1`
+		fi
 	   if [[ $SHOWERRORS -eq 1 ]]; then
 	   	echo ""
 	   	echo -e "[\033[31m************************\033[37m]"
