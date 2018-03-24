@@ -13,7 +13,11 @@
 #######################################
 function print_ko()
 {
-    echo -e "[\033[31m;)\033[37m]"
+    if [[ "$FUNMODE" -eq 0 ]]; then
+        echo -e "[\033[31mFail\033[37m]"
+    else
+        echo -e "[\033[31m:'(\033[37m]"
+    fi
 }
 
 #######################################
@@ -27,7 +31,11 @@ function print_ko()
 #######################################
 function print_ok()
 {
-    echo -e "[\033[32m^-^\033[37m]"
+    if [[ "$FUNMODE" -eq 0 ]]; then
+        echo -e "[\033[32mPass\033[37m]"
+    else
+         echo -e "[\033[32m^.^\033[37m]"
+    fi
 }
 
 #######################################
@@ -58,16 +66,27 @@ echo -ne "\033[37m"
 rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 
 # Cool welcome
-    echo "***;)******;)*********;)******"
-    echo "*******************WELCOME****"
-    echo "*********;)*******TO**********"
-    echo "***************THE*****;)*****"
-    echo "**;)******CHECKER*************"
-    echo "*****;)********;)******;)*****"
-    echo ""
-    echo -e "[\033[32m^-^\033[37m] -- means you are good to go! [\033[32mOK\033[37m]"
-    echo -e "[\033[31m;)\033[37m] -- means something went wrong! [\033[31mUHG OH!\033[37m]"
-    echo ""
+    
+    if [[ "$FUNMODE" -eq 1 ]]; then
+        echo "***;)******;)*********;)******"
+        echo "*******************WELCOME****"
+        echo "*********;)*******TO**********"
+        echo "***************THE*****;)*****"
+        echo "**;)******CHECKER*************"
+        echo "*****;)********;)******;)*****"
+        echo ""
+        echo -e "[\033[32m^-^\033[37m] -- means you are good to go! [\033[32mWoot!\033[37m]"
+        echo -e "[\033[31m:'(\033[37m] -- means something went wrong! [\033[31mUHG OH!\033[37m]"
+        echo ""
+    else
+        echo ""
+        echo "******************************"
+        echo "******************************"
+        echo "Welcome to the I&A Checker!"
+        echo "******************************"
+        echo "******************************"
+        echo ""
+    fi
 # Counter for tests passed
 i=0
 j=0
@@ -83,28 +102,40 @@ do
 done
 
 if [[ "$j" -eq 0 ]]; then
-    ./ship
 	echo ""
 	echo "Congrats you passed all tests!"
-    echo "You ROCK!!!!!!!!!!!!!"
-	echo ""
-    echo "***;)******;)*********;)******"
-    echo -e "\033[32m*********Results**************\033[37m"
-    echo "*********;)*******************"
-    echo -e "\033[32m***********RESULTS*****;)*****\033[37m"
-    echo "**;)**************************"
+    if [[ "$FUNMODE" -eq 1 ]]; then
+        if [[ "$SHOWEGG" -eq 1 ]]; then
+            ./ship
+        fi
+        echo "You ROCK!!!!!!!!!!!!!"
+    	echo ""
+        echo "***;)******;)*********;)******"
+        echo -e "\033[32m*********Results**************\033[37m"
+        echo "*********;)*******************"
+        echo -e "\033[32m***********RESULTS*****;)*****\033[37m"
+        echo "**;)**************************"
     echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
+    fi
 else
 	echo ""
-	echo -e "You passed \033[32m[$i]\033[37m tests :-)"
-	echo -e "But missed \033[31m[$j]\033[37m tests :'("
+	echo -e "-->> You passed \033[32m[$i]\033[37m tests :-)"
+	echo -e "-->> But missed \033[31m[$j]\033[37m tests :'("
 	echo ""
-    echo "***;)******;)*********;)******"
-    echo -e "\033[32m*********Results**************\033[37m"
-    echo "*********;)*******************"
-    echo -e "\033[32m***********RESULTS*****;)*****\033[37m"	
-    echo "**;)**************************"
-    echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
+    if [[ "$FUNMODE" -eq 1 ]]; then
+        echo "***;)******;)*********;)******"
+        echo -e "\033[32m*********Results**************\033[37m"
+        echo "*********;)*******************"
+        echo -e "\033[32m***********RESULTS*****;)*****\033[37m"	
+        echo "**;)**************************"
+        echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
+    else
+        echo "******************************"
+        echo "******************************"
+        echo "Thanks for checking with us! "
+        echo "******************************"
+        echo "******************************"
+    fi
 fi
 
 # Cleanup

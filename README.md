@@ -13,6 +13,12 @@
 ### You betty check your code by setting the `betty_check` setting in the config file to `1`, you then need to add your project's directory to `bettycheckerdir` like so: `bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"`
 	**betty checking is set to not show by default which is `0`
 
+### There is now a fun mode, you can select the fun mode by setting 'FUNMODE' to 1 like so:
+	`FUNMODE=1`
+
+### There is an easter egg setting which you can enable if you complete 100% of the tests, enable by setting it to 1 like so:
+	`SHOWEGG=1`
+
 ## Final result should look something like: 
 	**upon success you'll see "Congrats you passed all tests!" and maybe a hidden easter egg**
 

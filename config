@@ -1,11 +1,29 @@
 # Configuration file
+# Generally 1 means 'turn feature on', 0 means 'turn feature off'
+
+# -- ATTENTION: Please change below --
+
+#TO CHANGE: 
+#SHELL should be your shell's directory and TSHELL is the shell to test #agains
+
+SHELL="../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
+TSHELL="/bin/sh"
+
+#Optional settings
+
+FUNMODE=0
+SHOWEGG=1
+SHOWERRORS=0
+betty_check=0
+bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"
+
+#-- WARNING --
+#Please don't modify these!!!
 
 TESTDIR="."
 R=$RANDOM
 OUTPUTFILE="checker_output_$R"
 ERROROUTPUTFILE="checker_error_output_$R"
-SHELL="../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
-TSHELL="/bin/sh"
 SLEEP=`which sleep`
 SLEEPSECONDS=0.1
 LTRACE=`which ltrace`
@@ -17,6 +35,3 @@ WC=`which wc`
 RM=`which rm`
 TOUCH=`which touch`
 CHMOD=`which chmod`
-SHOWERRORS=0
-betty_check=0
-bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"
