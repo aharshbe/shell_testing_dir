@@ -5,7 +5,6 @@
 command="betty *.c *.h"
 
 if [[ $betty_check -eq 1 ]]; then
-	\n
 	echo ""
 	echo ">>> Checking betty..."
 	echo ""
