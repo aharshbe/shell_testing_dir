@@ -1,16 +1,9 @@
 #!/bin/bash
 #
-# Performing checks on the Holberton School "simple shell" project
+# Script to test custom shells
 
-#######################################
 # Print KO, in red, followed by a new line
-# Globals:
-#   None
-# Arguments:
-#   None
-# Returns:
-#   None
-#######################################
+
 function print_ko()
 {
     if [[ "$FUNMODE" -eq 0 ]]; then
@@ -20,15 +13,8 @@ function print_ko()
     fi
 }
 
-#######################################
 # Print OK in green, followed by a new line
-# Globals:
-#   None
-# Arguments:
-#   None
-# Returns:
-#   None
-#######################################
+
 function print_ok()
 {
     if [[ "$FUNMODE" -eq 0 ]]; then
@@ -38,18 +24,8 @@ function print_ok()
     fi
 }
 
-#######################################
 # Kill the shell in a clean way and remove temporary files
-# Globals:
-#   SHELL
-#   OUTPUTFILE
-#   ERROROUTPUTFILE
-#   LTRACEOUTPUTFILE
-# Arguments:
-#   None
-# Returns:
-#   None
-#######################################
+
 function stop_shell()
 {
     if [ `pidof $SHELL | wc -l` -ne 0 ]; then
@@ -142,6 +118,7 @@ else
         echo -e "You missed \033[31m[$k]\033[37m advanced tasks"
     fi
     if [[ "$FUNMODE" -eq 1 ]]; then
+        echo ""
         echo "***;)******;)*********;)******"
         echo -e "\033[32m*********Results**************\033[37m"
         echo "*********;)*******************"
@@ -149,6 +126,7 @@ else
         echo "**;)**************************"
         echo -e "\033[32m*****;)***ReSuLtS******;)*****\033[37m"
     else
+        echo ""
         echo "******************************"
         echo "******************************"
         echo "Thanks for checking with us! "

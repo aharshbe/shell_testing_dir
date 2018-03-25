@@ -1,7 +1,7 @@
 # Welcome to the I&A Checker ;)
 ## It works very similar Holberton's shell checker found [here](https://github.com/holbertonschool/0x15.c/).
 
-### To get startd, you'll need to modify some things int the `config` file: 
+### To get startd, you'll need to modify some settigns in the `config` file: 
 Change `SHELL` to the directory where your shell executable is, for example:
 `SHELL="../../HolbertonRepos/bash_stuff/simple_shell/V3/h"`
 
@@ -9,19 +9,14 @@ Change `SHELL` to the directory where your shell executable is, for example:
 Not changing your directory will restult in false tests.
 
 ### Next, consider checking out the `Optional settings` section of the `config` file, there you can choose to enable the following:
-* Valgrind checks (set on by default, change to `0` to turn off)
-	`valgrind_check`
-* Betty checks (set off by default)
-	`betty_check`
-	** if you do betty checks, please alter the directory to point to your folder containing source code for your shell
-* The ability turn off advanced checks (on by default)
-	`COUNTADV`
-* A fun mode which changes the interface of the checker (set off by default)
-	`FUNMODE`
-* An easteregg (on by default)
-	`SHOWEGG`
+* `valgrind_check`: Valgrind checks (set on by default, change to `0` to turn off)
+* `betty_check`: Betty checks (set off by default)
+	--> if you do betty checks, please alter the `bettycheckerdir` to point to your folder containing source code for your shell
+* `COUNTADV`: gives the ability turn off advanced checks (on by default)
+* `FUNMODE`: is a fun mode which changes the interface of the checker (set off by default)
+* `SHOWEGG`: An easteregg (on by default)
 
-### If you need to, you can debug your code by setting the `SHOWERRORS` setting in the config file to `1`
+### If you need to, you can debug your code by setting `SHOWERRORS`to `1`
 	**Showing errors is set not show by default, also, please keep in mind only the checks in I&ATests will display detailed debug information because we didn't write the scripts by Holberton
 
 ### To execute the checker, just type `./checker.bash` in your terminal from the directory that contains your clone.
@@ -35,8 +30,8 @@ Not changing your directory will restult in false tests.
 
 ![](proout.png)
 
-### If you'd like to contribute to the checker, please contact either Austin or Isaiah if you're not sure how to write scripts, otherwise, create a fork and add your own test directory, once you're finished, create a pull request and we will test and approve it. :)
+### If you'd like to contribute to the checker, please contact either Austin or Isaiah. If you're a shell pro, create a fork and add your own test directory with as many tests as you'd like, once you're finished, create a pull request and we'll test and approve it. :)
 
-## For any questions, concerns or improvements, please reach out to either Austin or Isaiah via Slack
+#### For any questions, concerns or improvements, please reach out to either Austin or Isaiah via Slack
 
 Cheers!
