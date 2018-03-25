@@ -24,9 +24,11 @@ $SLEEP $SLEEPSECONDS
 if diff <(sort "tmp") <(sort "tmp2"); then
 	   print_ok
 	   i=`expr $i + 1`
+	   total=`expr $total + 1`
 else
 	   print_ko
 	   j=`expr $j + 1`
+	   total=`expr $total + 1`
 	   if [[ $SHOWERRORS -eq 1 ]]; then
 	   	echo ""
 	   	echo -e "[\033[31m************************\033[37m]"

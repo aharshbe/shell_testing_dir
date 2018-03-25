@@ -92,6 +92,7 @@ i=0
 j=0
 k=0
 l=0
+total=0
 # Locates all tests and launch them
 for dir in `ls -d "$TESTDIR"/*/`
 do
@@ -129,13 +130,13 @@ else
         echo -e "-->> But missed \033[31m[$j]\033[37m tests :'("
         echo ""
     else
-        total=`expr $l + $i`
+        total_u=`expr $total + $l`
         passavd=`expr $l - $k`
-        mandatory=`expr $i - $k` 
+        passman=`expr $total - $j` 
         echo ""
-        echo " \033[32m-->> There are [$total] total tasks <<--"
-        echo -e "You passed \033[32m[$mandatory]\033[37m mandatory"
-        echo -e "You passed \033[32m[$passavd]\033[37m advanced"
+        echo "->> There are [$total_u] total tasks <<--"
+        echo -e "You passed \033[32m[$passman]\033[37m out of [$total] mandatory"
+        echo -e "You passed \033[32m[$passavd]\033[37m out of [$l] advanced"
         echo -e "You missed \033[31m[$j]\033[37m mandatory tasks"
         echo -e "You missed \033[31m[$k]\033[37m advanced tasks"
     fi

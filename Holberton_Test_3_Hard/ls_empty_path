@@ -26,10 +26,11 @@ $SLEEP $SLEEPSECONDS
 
 # check the result
 nmatch=`$CAT $OUTPUTFILE | $GREP -c "$tmp_file"`
-if [ $nmatch -eq 0 ]; then
+if [[ $nmatch -eq 0 ]]; then
     if [ `$CAT $ERROROUTPUTFILE | wc -c` -ge 5 ]; then
 	   print_ok
 	   i=`expr $i + 1`
+	   total=`expr $total + 1`
 	   if [[ $SHOWERRORS -eq 1 ]]; then
 	   	echo ""
 	   	echo -e "[\033[31m************************\033[37m]"
@@ -46,6 +47,7 @@ if [ $nmatch -eq 0 ]; then
     else
 	   print_ko
 	   j=`expr $j + 1`
+	   total=`expr $total + 1`
     fi
 else
     print_ko
