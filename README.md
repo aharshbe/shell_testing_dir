@@ -16,12 +16,12 @@ Not changing the SHELL variable will restult in false tests.
 * `FUNMODE`: is a fun mode which changes the interface of the checker (set off by default)
 * `SHOWEGG`: An easteregg (on by default)
 
-### If you need to, you can debug your code by setting `SHOWERRORS`to `1`
-	**Showing errors is off by default (to keep things less cluttered)
-	*!! Please keep in mind only the checks in `I&ATests` and `Z_Advanced` will display detailed debug information because we didn't write the scripts by Holberton
+### If you need to, you can debug your code by setting `SHOWERRORS`to `1`:
+	* Showing errors is off by default (to keep things less cluttered)
+* !! Please keep in mind only the checks in `I&ATests` and `Z_Advanced` will display detailed debug information because we didn't write the scripts by Holberton
 
-### To execute the checker, just type `./checker.bash` in your terminal from the directory that contains your clone.
-	* As a side note, please don't clone this checker into your source directory for your shell, the best place to clone is a seperate folder in your HOME dir or Desktop
+### To execute the checker, just type `./checker.bash` in your terminal from the directory that contains your clone:
+* As a side note, please don't clone this checker into your source directory for your shell, the best place to clone is a seperate folder in your HOME dir or Desktop
 
 ## Final result should look something like (for fun mode): 
 
