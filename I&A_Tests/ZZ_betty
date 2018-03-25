@@ -24,3 +24,4 @@ cd -
 fi
 
 rm -rf ./tmp_file_12345
+echo ""

@@ -126,6 +126,7 @@ if [[ "$j" -eq 0 ]]; then
 else
     if [[ $COUNTADV -eq 0 ]]; then
         echo ""
+        echo "-->> For mandatory:"
         echo -e "-->> You passed \033[32m[$i]\033[37m tests :-)"
         echo -e "-->> But missed \033[31m[$j]\033[37m tests :'("
         echo ""

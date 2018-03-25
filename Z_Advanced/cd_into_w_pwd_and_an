@@ -21,7 +21,6 @@ $SLEEP $SLEEPSECONDS
 if diff "$tmp_file" "$tmp_file2" >/dev/null; then
 	   print_ok
 	  	   if [[ $COUNTADV -eq 1 ]]; then
-	   		i=`expr $j + 1`
 	   		l=`expr $l + 1`
 		fi
 else

@@ -15,7 +15,7 @@ FUNMODE=0
 SHOWEGG=1
 COUNTADV=1
 SHOWERRORS=0
-betty_check=0
+betty_check=1
 bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"
 
 #-- WARNING --
