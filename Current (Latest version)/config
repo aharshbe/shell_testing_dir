@@ -6,9 +6,18 @@
 #TO CHANGE: 
 #SHELL should be your shell's directory and TSHELL is the shell to test #agains
 
-SHELL="../../../../HolbertonRepos/bash_stuff/simple_shell/h"
-LSDIR="../../../../HolbertonRepos/bash_stuff/simple_shell"
-bettycheckerdir="../../../../HolbertonRepos/bash_stuff/simple_shell"
+SHELL="REPLACE ME WITH THE PATH TO YOUR SHELL"
+
+	#example: SHELL="../simple_shell/h"
+
+LSDIR="REPLACE WITH PATH TO DIR WHICH HOLDS YOUR SHELL"
+
+	#exmaple: LSDIR="./HolbertonRepos/bash_stuff/simple_shell"
+
+bettycheckerdir="SAME AS LASDIR"
+
+	#example: bettycheckerdir="./HolbertonRepos/bash_stuff/simple_shell"
+	
 TSHELL="/bin/sh"
 
 #Optional settings
