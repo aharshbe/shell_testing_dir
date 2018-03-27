@@ -25,11 +25,11 @@ Not changing the SHELL variable will restult in false tests.
 
 ## Final result should look something like (for fun mode): 
 
-![](shell_testing_dir/Current (Latest version)/exampleout.png)
+![](Current\ (Latest version)/exampleout.png)
 
 ## or below for the professional mode:
 
-![](shell_testing_dir/Current (Latest version)/proout.png)
+![](Current\ (Latest version)/proout.png)
 
 ### If you'd like to contribute to the checker, please contact either Austin or Isaiah. If you're a shell pro, create a fork and add your own test directory with as many tests as you'd like, once you're finished, create a pull request and we'll test and approve it. :)
 
