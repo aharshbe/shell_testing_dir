@@ -1,0 +1,14 @@
+#!/bin/bash
+trap : SIGTERM SIGINT
+
+echo $$
+
+find / >/dev/null 2>&1 &
+FIND_PID=$!
+
+wait $FIND_PID
+
+if [[ $? -gt 128 ]]
+then
+    kill $FIND_PID
+fi

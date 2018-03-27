@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# simple test with ls to check if the shell can find ls in the PATH
+
+command="betty *.c *.h"
+tmp_file="tmp_file_12345"
+touch $tmp_file
+
+if [[ $betty_check -eq 1 ]]; then
+	cd $bettycheckerdir && $command > $tmp_file 2>&1
+
+	grep -q "ERROR" "$tmp_file"
+	ret=$?
+	grep -q "WARNING" "$tmp_file"
+	ret2=$?
+
+	if [[ $ret -eq 1 && $ret2 -eq 1 ]]; then
+		   print_ok
+		   i=`expr $i + 1`
+		   total=`expr $total + 1`
+	else
+		   print_ko
+		   j=`expr $j + 1`
+		   total=`expr $total + 1`
+		   if [[ $SHOWERRORS -eq 1 ]]; then
+		   	echo ""
+		   	echo -e "[\033[31m************************\033[37m]"
+		   	echo ">> Real output << "
+		   	cat $tmp_file
+		   	echo ">>**************<<"
+		   	echo ""
+		   	echo "> Expected output: "
+		   	echo "No ERRORS or WARNINGS."
+		   	echo ">>**************<<"
+		    echo -e "[\033[31m************************\033[37m]"
+		   fi
+	fi
+	>/dev/null cd -
+else
+	echo "no betty check... ;)"
+fi
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+
+rm -rf $tmp_file
