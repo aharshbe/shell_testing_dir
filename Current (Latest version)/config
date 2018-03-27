@@ -4,22 +4,24 @@
 # -- ATTENTION: Please change below --
 
 #TO CHANGE: 
-#SHELL should be your shell's directory and TSHELL is the shell to test #agains
-
+#SHELL should be your shell's directory and TSHELL is the shell to test #against
+#------------------------------------------------------------------------------
 SHELL="REPLACE ME WITH THE PATH TO YOUR SHELL"
 
 	#example: SHELL="../simple_shell/h"
-
+#------------------------------------------------------------------------------
 LSDIR="REPLACE WITH PATH TO DIR WHICH HOLDS YOUR SHELL"
 
 	#exmaple: LSDIR="./HolbertonRepos/bash_stuff/simple_shell"
-
+#------------------------------------------------------------------------------
 bettycheckerdir="SAME AS LASDIR"
 
 	#example: bettycheckerdir="./HolbertonRepos/bash_stuff/simple_shell"
-	
+#------------------------------------------------------------------------------
 TSHELL="/bin/sh"
 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #Optional settings
 
 FUNMODE=0
@@ -28,6 +30,8 @@ COUNTADV=1
 SHOWERRORS=0
 valgrind_check=1
 betty_check=1
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 #-- WARNING --
 #Please don't modify these!!!
