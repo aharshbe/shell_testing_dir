@@ -18,18 +18,18 @@ Not changing the SHELL variable will restult in false tests.
 
 ### If you need to, you can debug your code by setting `SHOWERRORS`to `1`:
 	* Showing errors is off by default (to keep things less cluttered)
-* !! Please keep in mind only the checks in `I&ATests` and `Z_Advanced` will display detailed debug information because we didn't write the scripts by Holberton
+* !! Please keep in mind not all of the checks will display detailed debug information because we didn't write all of them some are writtien by Holberton
 
 ### To execute the checker, just type `./checker.bash` in your terminal from the directory that contains your clone:
 * As a side note, please don't clone this checker into your source directory for your shell, the best place to clone is a seperate folder in your HOME dir or Desktop
 
 ## Final result should look something like (for fun mode): 
 
-![](exampleout.png)
+![](./Current \(Latest version)/exampleout.png)
 
 ## or below for the professional mode:
 
-![](proout.png)
+![](./Current \(Latest version)/proout.png)
 
 ### If you'd like to contribute to the checker, please contact either Austin or Isaiah. If you're a shell pro, create a fork and add your own test directory with as many tests as you'd like, once you're finished, create a pull request and we'll test and approve it. :)
 
