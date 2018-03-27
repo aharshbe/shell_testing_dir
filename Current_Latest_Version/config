@@ -6,15 +6,15 @@
 #TO CHANGE: 
 #SHELL should be your shell's directory and TSHELL is the shell to test #against
 #------------------------------------------------------------------------------
-SHELL="REPLACE ME WITH THE PATH TO YOUR SHELL"
+SHELL="../../../../HolbertonRepos/bash_stuff/simple_shell/h"
 
 	#example: SHELL="../simple_shell/h"
 #------------------------------------------------------------------------------
-LSDIR="REPLACE WITH PATH TO DIR WHICH HOLDS YOUR SHELL"
+LSDIR="../../../../HolbertonRepos/bash_stuff/simple_shell"
 
 	#exmaple: LSDIR="./HolbertonRepos/bash_stuff/simple_shell"
 #------------------------------------------------------------------------------
-bettycheckerdir="SAME AS LASDIR"
+bettycheckerdir="../../../../HolbertonRepos/bash_stuff/simple_shell"
 
 	#example: bettycheckerdir="./HolbertonRepos/bash_stuff/simple_shell"
 #------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ SHOWEGG=1
 COUNTADV=1
 SHOWERRORS=0
 valgrind_check=1
-betty_check=1
+betty_check=0
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -41,7 +41,7 @@ R=$RANDOM
 OUTPUTFILE="checker_output_$R"
 ERROROUTPUTFILE="checker_error_output_$R"
 SLEEP=`which sleep`
-SLEEPSECONDS=0.3
+SLEEPSECONDS=0.1
 LTRACE=`which ltrace`
 LTRACEOUTPUTFILE="checker_ltrace_output_$R"
 ECHO=`which echo`

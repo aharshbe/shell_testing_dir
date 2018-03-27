@@ -70,7 +70,7 @@ k=0
 l=0
 total=0
 # Locates all tests and launch them
-for dir in `ls -d "$TESTDIR"/*/`
+for dir in `ls -dv "$TESTDIR"/*/`
 do
     echo "> $dir"
     echo " "
