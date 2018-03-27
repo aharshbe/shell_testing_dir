@@ -6,7 +6,9 @@
 #TO CHANGE: 
 #SHELL should be your shell's directory and TSHELL is the shell to test #agains
 
-SHELL="../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
+SHELL="../../../HolbertonRepos/bash_stuff/simple_shell/h"
+LSDIR="../../../HolbertonRepos/bash_stuff/simple_shell/"
+bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/"
 TSHELL="/bin/sh"
 
 #Optional settings
@@ -16,8 +18,7 @@ SHOWEGG=1
 COUNTADV=1
 SHOWERRORS=0
 valgrind_check=1
-betty_check=0
-bettycheckerdir="../../../HolbertonRepos/bash_stuff/simple_shell/V3"
+betty_check=1
 
 #-- WARNING --
 #Please don't modify these!!!

@@ -9,8 +9,8 @@ if [[ $valgrind_check -eq 1 ]]; then
 
 
 	# cheking for patters that indicate err
-	grep -q "in use at exit: 0 bytes in 0 blocks" "test_ing.txt"
-	grep "in use at exit: 0 bytes in 0 blocks" "test_ing.txt" > output.txt
+	grep -q "All heap blocks were freed -- no leaks are possible" "test_ing.txt"
+	grep "All heap blocks were freed -- no leaks are possible" "test_ing.txt" > output.txt
 	
 
 	# grab exit status of grep (0 if all good ,1 if not)
