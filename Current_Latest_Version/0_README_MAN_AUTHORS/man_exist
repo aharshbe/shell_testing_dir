@@ -4,7 +4,7 @@
 tmp_file="testing_readme"
 # create a pseudo random file
 ls $LSDIR > $tmp_file
-cat $tmp_file | grep -q "manpage"
+cat $tmp_file | grep -q "man_1_simple_shell"
 ret=$?
 
 # wait a little bit
